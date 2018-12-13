@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php
+include("includes/handlers/register-handler.php");
+include("includes/handlers/login-handler.php");
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +34,7 @@
     <h2>Create your free account</h2>
     <p>
     <label for="username">Username</label>
-    <input type="text" id="username" name="loginUsername" placeholder="username" required>
+    <input type="text" id="username" name="username" placeholder="username" required>
     </p>
     <p>
     <label for="firstName">First Name</label>
