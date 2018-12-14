@@ -36,18 +36,23 @@ include("includes/handlers/login-handler.php");
     <form id="registerForm" action="register.php" method="post">
     <h2>Create your free account</h2>
     <p>
+    <?php echo $account->getError("Your username must be between 5 and 25 characters"); ?>
     <label for="username">Username</label>
     <input type="text" id="username" name="username" placeholder="username" required>
     </p>
     <p>
+    <?php echo $account->getError("Your First Name must be between 2 and 25 characters"); ?>
     <label for="firstName">First Name</label>
     <input type="text" id="firstName" name="firstName" placeholder="First" required>
     </p>
     <p>
+    <?php echo $account->getError("Your Last Name must be between 2 and 25 characters"); ?>
     <label for="lastName">Username</label>
     <input type="text" id="lastName" name="lastName" placeholder="Last" required>
     </p>
     <p>
+    <?php echo $account->getError("Your emails must match"); ?>
+    <?php echo $account->getError("email is not valid"); ?>
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="user@domain.com" required>
     </p>
@@ -58,11 +63,11 @@ include("includes/handlers/login-handler.php");
 
     <p>
     <label for="password">Password</label>
-    <input type="password" id="password" name="loginPassword"  placeholder="enter your password" required>
+    <input type="password" id="password" name="password"  placeholder="enter your password" required>
     </p>
     <p>
     <label for="password2">Confirm Password</label>
-    <input type="password" id="password2" name="loginPassword" placeholder="confirm your password" required>
+    <input type="password" id="password2" name="password2" placeholder="confirm your password" required>
     </p>
 
     <button type="submit" name="registerButton">SIGN UP</button>
