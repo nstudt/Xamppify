@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 
 <?php
+include("includes/classes/Account.php");
+
+$account =  new Account();
+
 include("includes/handlers/register-handler.php");
 include("includes/handlers/login-handler.php");
-?>
 
-<html lang="en">
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +19,7 @@ include("includes/handlers/login-handler.php");
     <h1>Registration Page</h1>
     <div id="inputContainer">
     <form id="loginForm" action="register.php" method="post">
-    <h2>Login toi your account</h2>
+    <h2>Login to your account</h2>
     <p>
     <label for="loginUsername">Username</label>
     <input type="text" id="loginUsername" name="loginUsername" placeholder="username" required>
