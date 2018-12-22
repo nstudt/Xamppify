@@ -2,6 +2,15 @@
 
 if(isset($_POST['loginButton'])) {
     //echo "login button was pressed";
-    $loginUsername = $_POST['loginUsername'];
+    $username = $_POST['loginUsername'];
+    $password = $_POST['loginPassword'];
+
+    //login function
+    $result = $account->login($username, $password);
+
+    if($result == true){
+        $_SESSION['userLoggedIn'] = $username;
+        header("Location: index.php");
+    }
 }
 ?>
